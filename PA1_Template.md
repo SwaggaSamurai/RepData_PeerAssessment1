@@ -88,6 +88,7 @@ qplot(steps.day$StepsPerDay,geom="histogram", xlab="Total Steps Taken Per Day", 
 
 ```
 
+Format: ![TotalSteps](https://github.com/SwaggaSamurai/RepData_PeerAssessment1/blob/master/figure/total_steps_taken_per_day.JPG)
 Here we can see the histogram or distribution of the total number of steps taken per day during the study period.
 We calculated the average steps per day to have a **mean** of **`r mean.steps`** steps per day and a **median** of **`r median.steps`** steps per day. We can see evidence of this being the case in the large spike of total steps taken per day just above 10,000 steps. 
 
@@ -109,6 +110,9 @@ max.interval<-max(mean.interval$AverageSteps,na.rm=TRUE)
 interval<-835
 
 ```
+![](https://github.com/SwaggaSamurai/RepData_PeerAssessment1/blob/master/figure/average_daily_activity.JPG?raw=true)
+
+
 
 As we can see from the plot the average steps taken over the time interval of a day taken over the duration of the study. This has a fairly typical distribution of a person's walking patterns because the beginning of the day is when the device is not being used. Upon waking up, and then some mid day activity that consistently occurs around the interval of **`r interval`** where the max average number of steps taken per day is **`r max.interval`.** 
 
@@ -146,6 +150,8 @@ new.median.steps<-median(new.steps.day$StepsPerDay)
 qplot(new.steps.day$StepsPerDay,geom="histogram", xlab="Total Steps Taken Per Day", ylab="Count",fill=I("purple"),col=I("blue"))
 ```
 
+![](https://github.com/SwaggaSamurai/RepData_PeerAssessment1/blob/master/figure/new_steps_taken_per_day.JPG?raw=true)
+
 Here we can see the histogram or distribution of the total number of steps taken per day during the study period. BUT NOW the calculated values based on the overall average steps taken per interval is inserted in where NA was before:
 
 We calculated the average **NEW** steps per day to have a **mean** of **`r new.mean.steps`** steps per day and a **median** of **`r new.median.steps`** steps per day. 
@@ -181,6 +187,9 @@ ggplot(weekday.activity, aes(x=interval, y=steps)) +
         ylab("Time")
 
 ```
+
+![](https://github.com/SwaggaSamurai/RepData_PeerAssessment1/blob/master/figure/average_daily_activity_weekday_weekend.JPG)
+
 We can see form the plots that there is considerably more activity thruought the dat on **weekends** than on **weekdays** this is typically because we aren't at our desks working!
 
 ```{r, include=FALSE}
