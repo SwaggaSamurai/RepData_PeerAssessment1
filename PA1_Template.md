@@ -183,4 +183,9 @@ ggplot(weekday.activity, aes(x=interval, y=steps)) +
 ```
 We can see form the plots that there is considerably more activity thruought the dat on **weekends** than on **weekdays** this is typically because we aren't at our desks working!
 
+```{r, include=FALSE}
+   # add this chunk to end of mycode.rmd
+   file.rename(from="scripts/mycode.md", 
+               to="PA1_template.md")
+```
 
